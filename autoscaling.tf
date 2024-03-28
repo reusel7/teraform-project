@@ -14,5 +14,5 @@ resource "aws_autoscaling_group" "artash_auto_scaling_group" {
   min_size             = 1
   max_size             = 3
   desired_capacity     = 2
-  vpc_zone_identifier  = [aws_subnet.artash_subnet.id]
+  vpc_zone_identifier  = [aws_subnet.artash_subnet_1.id]
 }
