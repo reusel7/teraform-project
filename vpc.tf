@@ -27,11 +27,7 @@ resource "aws_subnet" "artash_subnet_3" {
   availability_zone = "us-east-2c"
 }
 
-resource "aws_subnet" "artash_subnet_4" {
-  vpc_id            = aws_vpc.artash_vpc.id
-  cidr_block        = "10.10.10.96/27"
-  availability_zone = "us-east-2z"
-}
+
 
 # Create security_group allowed allowed all incoming traffic to VPC ports ///////////////////////////
 
