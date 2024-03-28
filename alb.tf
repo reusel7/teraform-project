@@ -20,7 +20,7 @@ resource "aws_lb" "artash_alb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.artash_SG.id]
-  subnets            = [aws_subnet.artash_subnet_a.id, aws_subnet.artash_subnet_b.id]
+  subnets            = [aws_subnet.artash_subnet_1.id, aws_subnet.artash_subnet_2.id]
 }
 
 # Create AWS application-load-balancer target group ////////////////////////////////////////////
