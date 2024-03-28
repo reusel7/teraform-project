@@ -21,13 +21,13 @@ resource "aws_subnet" "artash_subnet_b" {
   availability_zone = "us-east-2a"
 }
 
-resource "aws_subnet" "my_subnet" {
+resource "aws_subnet" "artash_subnet" {
   vpc_id            = aws_vpc.artash_vpc.id
   cidr_block        = "10.10.10.64/27"
   availability_zone = "us-east-2b"
 }
 
-resource "aws_subnet" "my_subnet" {
+resource "aws_subnet" "artash_subnet" {
   vpc_id            = aws_vpc.artash_vpc.id
   cidr_block        = "10.10.10.96/27"
   availability_zone = "us-east-2b"
