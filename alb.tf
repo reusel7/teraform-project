@@ -19,7 +19,7 @@ resource "aws_lb" "artash_alb" {
   name               = "artash-alb"
   internal           = false
   load_balancer_type = "application"
-  security_groups    = [aws_security_group.artash_security_group.id]
+  security_groups    = [aws_security_group.artash_SG.id]
   subnets            = [aws_subnet.artash_subnet_a.id, aws_subnet.artash_subnet_b.id]
 }
 
@@ -38,7 +38,7 @@ resource "aws_instance" "artash_instance1" {
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.artash_subnet.id
   associate_public_ip_address = true
-  security_groups    = [aws_security_group.artash_security_group.id]
+  security_groups    = [aws_security_group.artash_SG.id]
   user_data     = <<-EOF
     #!/bin/bash
     #Use this for your user data(script from top to bottom)
@@ -59,7 +59,7 @@ resource "aws_instance" "artash_instance2" {
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.artash_subnet.id
   associate_public_ip_address = true
-  security_groups    = [aws_security_group.artash_security_group.id]
+  security_groups    = [aws_security_group.artash_SG.id]
   user_data     = <<-EOF
     #!/bin/bash
     #Use this for your user data(script from top to bottom)
