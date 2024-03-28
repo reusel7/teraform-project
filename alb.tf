@@ -36,7 +36,7 @@ resource "aws_lb_target_group" "artash_target_group" {
 resource "aws_instance" "artash_instance1" {
   ami           = "ami-0b8b44ec9a8f90422"
   instance_type = "t2.micro"
-  subnet_id     = aws_subnet.artash_subnet.id
+  subnet_id     = aws_subnet.artash_subnet_1.id
   associate_public_ip_address = true
   security_groups    = [aws_security_group.artash_SG.id]
   user_data     = <<-EOF
@@ -57,7 +57,7 @@ EOF
 resource "aws_instance" "artash_instance2" {
   ami           = "ami-0b8b44ec9a8f90422"
   instance_type = "t2.micro"
-  subnet_id     = aws_subnet.artash_subnet.id
+  subnet_id     = aws_subnet.artash_subnet_2.id
   associate_public_ip_address = true
   security_groups    = [aws_security_group.artash_SG.id]
   user_data     = <<-EOF
