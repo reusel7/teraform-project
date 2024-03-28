@@ -57,7 +57,7 @@ EOF
 resource "aws_instance" "artash_instance2" {
   ami           = "ami-0b8b44ec9a8f90422"
   instance_type = "t2.micro"
-  subnet_id     = aws_subnet.my_subnet.id
+  subnet_id     = aws_subnet.artash_subnet.id
   associate_public_ip_address = true
   security_groups    = [aws_security_group.artash_security_group.id]
   user_data     = <<-EOF
